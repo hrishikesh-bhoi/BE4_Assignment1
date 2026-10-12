@@ -6,9 +6,12 @@ const { initializeDatabase } = require("./db/db.connect");
 const Book = require("./models/book.models")
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+   "https://bi-1-1-hw-1-nu.vercel.app"
+],
   credentials: true,
-  optionSuccessStatus: 200,
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
